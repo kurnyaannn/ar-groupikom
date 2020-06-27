@@ -2,25 +2,55 @@
 <html>
   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
       <a-marker type='barcode' value='2'>
-        <a-entity 
-        gltf-model="url(/assets/Mask/scene.gltf)"
-        scale="0.1 0.1 0.1"></a-entity>
+
+        <a-text value="Kasus"
+        anchor="center"
+        align="center"
+        position="-3.185 -0.676 -0.969"
+        rotation="-79.827 -0.455 2.001"></a-text>
+
+        <a-text value="Dirawat"
+        anchor="center"
+        align="center"
+        position="-1.418 -0.388 -0.969"
+        rotation="-79.827 -0.455 2.001"></a-text>
+
+        <a-text value="Sembuh"
+        anchor="center"
+        align="center"
+        position="0.780 0.004 -0.986"
+        rotation="-79.827 -0.455 2.001"></a-text>
+
+        <a-text value="Meninggal"
+        anchor="center"
+        align="center"
+        position="2.941 0.327 -0.978"
+        rotation="-79.827 -0.455 2.001"></a-text>
+
+        <a-entity
+        gltf-model="url(/assets/Indonesia/scene.gltf)"
+        scale="0.02 0.02 0.02"></a-entity>
       </a-marker>
 
       <a-marker type='barcode' value='4'>
         <a-entity
-        gltf-model="url(/assets/People/scene.gltf)"
-        scale="0.1 0.1 0.1"></a-entity>
+        gltf-model="url(/assets/Covid1/scene.gltf)"
+        position="-3 -0.268 0.063"
+        scale="0.02 0.02 0.02"></a-entity>
       </a-marker>
 
       <a-marker type='barcode' value='6'>
         <a-entity
-        gltf-model="url(/assets/Covid1/scene.gltf)"
-        scale="0.01 0.01 0.01"></a-entity>
+        animation-mixer="clip: *;"
+        gltf-model="url(/assets/Doctor/scene.gltf)"
+        position="0 0.031 0.440"
+        scale="2 2 2"
+        rotation="-72.875 113.956 -113.947"></a-entity>
       </a-marker>
 
       <a-entity camera></a-entity>
