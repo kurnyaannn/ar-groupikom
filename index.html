@@ -12,7 +12,7 @@
     <audio id="audioID" volume="0.2" loop> <source src="/assets/Sound/bgSound.mp3" type="audio/mp3"></audio>
     <a-scene embedded arjs='trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' gesture-detector>
       <a-assets>
-        <audio id="sound" src="/assets/Sound/dancingModel.mp3" preload="auto"></audio>
+        <audio id="sound" src="/assets/Sound/dancingModel.mp3" preload="auto" crossorigin="anonymous"></audio>
       </a-assets>
 
       <a-marker id="markerA" type='barcode' value='2' smooth="true"
