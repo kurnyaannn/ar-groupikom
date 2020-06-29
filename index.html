@@ -8,8 +8,8 @@
     <script src="/js/gesture-detector.js"></script>
     <script src="/js/gesture-handler.js"></script>
   </head>
-  <body style='margin : 0px; overflow: hidden;' onload="autoNotify()">
-    <audio id="sound2" src="/assets/Sound/bgSound.mp3" preload="auto" crossorigin="anonymous" style="display: none;"></audio>
+  <body style='margin : 0px; overflow: hidden;'>
+    <audio id="audioID" volume="0.2" loop> <source src="/assets/Sound/bgSound.mp3" type="audio/mp3"></audio>
     <a-scene embedded arjs='trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' gesture-detector>
       <a-assets>
         <audio id="sound" src="/assets/Sound/modelSound.mp3" preload="auto" crossorigin="anonymous"></audio>
@@ -153,11 +153,8 @@
           }
         }
       });
-      var bgSound = document.getElementById("sound2");
-      bgSound.volume = 0.1;
-      function autoNotify(){
-        bgSound.play();
-      }
+      document.getElementById("audioID").autoplay = true;
+      document.getElementById("audioID").volume = 0.1;
       async function loadData() {
         let url = 'https://corona.coollabs.work/country/indonesia';
         let obj = await (await fetch(url)).json();
