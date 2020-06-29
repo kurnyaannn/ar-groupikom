@@ -21,32 +21,41 @@
       cursor="fuse: false; rayOrigin: mouse;"
       id="markerA">
 
+        <a-text
+        anchor="center"
+        align="center"
+        position="-0.002 0.256 -1.368"
+        rotation="-79.607 0.081 -0.348"
+        font="dejavu"
+        value="Data Aktual Covid-19 Indonesia"
+        animation="property: components.text.material.uniforms.color.value; type: color; to: red; dir: alternate; loop: true"></a-text>
+
         <a-text id="dataConfirmed"
         anchor="center"
         align="center"
         position="-1.253 0.256 -0.742"
-        rotation="-79.569 -7.673 5.599"
+        rotation="-79.507 -1.556 0.687"
         font="dejavu"></a-text>
 
         <a-text id="dataActive"
         anchor="center"
         align="center"
         position="-1.373 0.256 0.742"
-        rotation="-79.57 -7.674 5.6"
+        rotation="-80.214 0.501 -1.400"
         font="dejavu"></a-text>
 
         <a-text id="dataRecovered"
         anchor="center"
         align="center"
         position="1.250 0.256 -0.742"
-        rotation="-79.57 -7.674 5.6"
+        rotation="-79.637 -2.390 2.071"
         font="dejavu"></a-text>
 
         <a-text id="dataDeaths"
         anchor="center"
         align="center"
         position="1.251 0.256 0.742"
-        rotation="-79.284 -5.385 4.519"
+        rotation="-79.325 2.754 -3.011"
         font="dejavu"></a-text>
 
         <a-entity
@@ -59,6 +68,15 @@
       </a-marker>
 
       <a-marker id="mark2" type='barcode' value='4'>
+        <a-text
+        anchor="center"
+        align="center"
+        position="-0.002 0.256 -1.368"
+        rotation="-79.607 0.081 -0.348"
+        font="dejavu"
+        value="Bentuk Virus Covid-19"
+        animation="property: components.text.material.uniforms.color.value; type: color; to: red; dir: alternate; loop: true"></a-text>
+
         <a-entity
         gltf-model="url(/assets/Covid/scene.gltf)"
         position="0 0 -0.500"
